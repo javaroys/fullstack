@@ -1,0 +1,22 @@
+sequenceDiagram
+    	participant browser
+    	participant server
+    
+    	HTTP POST- pyyntö lähtee osoitteeseen new_note.
+
+	server vastaa HTTP-statuskoodilla 302.
+
+	browser lataa uudelleen muistiinpanojen sivun.
+
+	3 muuta pyyntöä lähtee myös:
+		Tyylitiedoston eli main.css
+		Javascript-koodin eli Main.js
+		muistiinpanojen raakadata eli data.json lataaminen
+
+	lomakkeen lähetys onnistuu HTTP POST-pyyntönä ja osoitteeseen 
+	new_note form-tagiin määriteltyjen attribuuttien action ja
+	method avulla.
+
+	server saa POST-pyynnön datan pyytämällä sitä pyyntöä vastaavan
+	olion req kentästä req.body
+	
