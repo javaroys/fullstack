@@ -15,9 +15,8 @@ sequenceDiagram
     server-->>browser: Single page app file
     deactivate server
     
-    
-    
     Note left of browser: Server gets new note req and sends a msg back
     
     deactivate server    
+
 ```
